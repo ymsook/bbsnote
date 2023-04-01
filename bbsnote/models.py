@@ -22,6 +22,7 @@ class Comment(models.Model):
 
     class Meta:
         ordering = ['-create_date']
-        
+        # 댓글 순서가 최신글부터 나오게함.
+
     def __str__(self) :
         return f'[{self.board.id}:{self.board.subject}] {self.content}'
